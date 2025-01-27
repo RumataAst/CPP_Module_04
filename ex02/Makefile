@@ -6,12 +6,13 @@
 #    By: akretov <akretov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/02 16:15:06 by akretov           #+#    #+#              #
-#    Updated: 2025/01/17 16:57:18 by akretov          ###   ########.fr        #
+#    Updated: 2025/01/27 18:27:38 by akretov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= BraiiiiiiinnnzzzZ
-SRCS    := main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+NAME	= No_more_animals
+SRCS    := main.cpp AAnimal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp \
+			Brain.cpp
 BIN		:= bin
 OBJS    := $(addprefix $(BIN)/, $(SRCS:.cpp=.o))
 INC		:= include
