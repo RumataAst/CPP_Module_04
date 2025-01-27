@@ -6,12 +6,13 @@
 #    By: akretov <akretov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/02 16:15:06 by akretov           #+#    #+#              #
-#    Updated: 2025/01/17 16:57:18 by akretov          ###   ########.fr        #
+#    Updated: 2025/01/27 19:07:25 by akretov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= BraiiiiiiinnnzzzZ
-SRCS    := main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+NAME	= Interface
+SRCS    := main.cpp AMateria.cpp Cure.cpp Ice.cpp ICharacter.cpp \
+			IMateriaSource.cpp
 BIN		:= bin
 OBJS    := $(addprefix $(BIN)/, $(SRCS:.cpp=.o))
 INC		:= include
