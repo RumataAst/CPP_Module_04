@@ -18,17 +18,24 @@ Character::Character(const Character &copy) : _name(copy._name) {
 
 Character &Character::operator=(const Character &source) {
     if (this != &source) {
-        for (int i = 0; i < 4; ++i) {
-            delete _inventory[i];
-        }
+        AMateria* temp[4] = {NULL, NULL, NULL, NULL};
 
-        _name = source._name;
-        for (int i = 0; i < 4; ++i) {
-            if (source._inventory[i]) {
-                _inventory[i] = source._inventory[i]->clone();
-            } else {
-                _inventory[i] = NULL;
+        try {
+            for (int i = 0; i < 4; ++i) {
+                if (source._inventory[i]) {
+                    temp[i] = source._inventory[i]->clone();
+                }
             }
+
+            for (int i = 0; i < 4; ++i) {
+                delete _inventory[i];
+                _inventory[i] = temp[i];
+            }
+        } catch (...) {
+            for (int i = 0; i < 4; ++i) {
+                delete temp[i];
+            }
+            throw;
         }
     }
     return *this;

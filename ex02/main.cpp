@@ -13,7 +13,7 @@ int main() {
     std::cout << "The " << i->getType() << " says: ";
     i->makeSound();
     std::cout << "The " << myDog.getType() << " says: ";
-    myDog.makeSound();  // Outputs: Woof!
+    myDog.makeSound();
 
     delete i;
     // Animal myAnimal;
