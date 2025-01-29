@@ -18,12 +18,10 @@ Character::Character(const Character &copy) : _name(copy._name) {
 
 Character &Character::operator=(const Character &source) {
     if (this != &source) {
-        // Deallocate old Materia objects first
         for (int i = 0; i < 4; ++i) {
             delete _inventory[i];
         }
 
-        // Copy new values
         _name = source._name;
         for (int i = 0; i < 4; ++i) {
             if (source._inventory[i]) {
