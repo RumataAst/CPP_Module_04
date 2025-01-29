@@ -15,6 +15,7 @@ int main() {
     std::cout << "The " << myDog.getType() << " says: ";
     myDog.makeSound();  // Outputs: Woof!
 
+    delete i;
     // Animal myAnimal;
     // myAnimal.makeSound();
     //  WrongAnimal myAnimal;
