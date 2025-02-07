@@ -13,7 +13,7 @@ Cure &Cure::operator=(const Cure &source) {
 
 Cure::~Cure() {}
 
-Cure *Cure::clone() const {
+AMateria *Cure::clone() const {
     return new Cure(*this);
 }
 

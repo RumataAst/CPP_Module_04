@@ -10,6 +10,6 @@ public:
     Ice &operator = (const Ice &source);
     ~Ice();
 
-    Ice *clone() const;
+    AMateria *clone() const;
     void use(ICharacter& target);
 };
